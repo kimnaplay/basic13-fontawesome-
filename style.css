@@ -1,0 +1,42 @@
+@charset "UTF-8" ;
+
+*{margin: 0; padding: 0;}
+img{width: 100%;}
+
+.wrap{width: 800px; margin: auto;}
+.wrap .slick1{}
+
+.wrap .slick1 .slick-prev{
+    position: absolute;
+    left: 0; top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    visibility: hidden; /* -> 존재는 하지만 안보이게 하는것 */
+    font-size: 0;
+}
+.wrap .slick1 .slick-prev::after{
+    content: "\f0a5";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 400;
+    visibility: visible; /* -> 나는 보여라는 기능 */
+    font-size: 45px;
+    color: #fff;
+    text-shadow: 0px 0px 10px black;
+}
+
+.wrap .slick1 .slick-next{
+    position: absolute;
+    right: 0; top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    visibility: hidden;
+}
+.wrap .slick1 .slick-next::after{
+    content: "\f0a4";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 400;
+    visibility: visible;
+    color: #fff;
+    font-size: 45px;
+    text-shadow: 0px 0px 10px black;
+}
